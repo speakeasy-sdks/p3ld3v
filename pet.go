@@ -29,7 +29,7 @@ func newPet(sdkConfig sdkConfiguration) *pet {
 
 // AddPetForm - Add a new pet to the store
 // Add a new pet to the store
-func (s *pet) AddPetForm(ctx context.Context, request shared.Pet, security operations.AddPetFormSecurity) (*operations.AddPetFormResponse, error) {
+func (s *pet) AddPetForm(ctx context.Context, request shared.Pet, security operations.AddPetFormSecurity, opts ...operations.Option) (*operations.AddPetFormResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/pet"
 
@@ -45,7 +45,12 @@ func (s *pet) AddPetForm(ctx context.Context, request shared.Pet, security opera
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	if o.AcceptHeaderOverride != nil {
+		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
+	} else {
+		req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	}
+
 	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s %s", s.sdkConfiguration.Language, s.sdkConfiguration.SDKVersion, s.sdkConfiguration.GenVersion, s.sdkConfiguration.OpenAPIDocVersion))
 
 	req.Header.Set("Content-Type", reqContentType)
@@ -97,7 +102,7 @@ func (s *pet) AddPetForm(ctx context.Context, request shared.Pet, security opera
 
 // AddPetJSON - Add a new pet to the store
 // Add a new pet to the store
-func (s *pet) AddPetJSON(ctx context.Context, request shared.Pet, security operations.AddPetJSONSecurity) (*operations.AddPetJSONResponse, error) {
+func (s *pet) AddPetJSON(ctx context.Context, request shared.Pet, security operations.AddPetJSONSecurity, opts ...operations.Option) (*operations.AddPetJSONResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/pet"
 
@@ -113,7 +118,12 @@ func (s *pet) AddPetJSON(ctx context.Context, request shared.Pet, security opera
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	if o.AcceptHeaderOverride != nil {
+		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
+	} else {
+		req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	}
+
 	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s %s", s.sdkConfiguration.Language, s.sdkConfiguration.SDKVersion, s.sdkConfiguration.GenVersion, s.sdkConfiguration.OpenAPIDocVersion))
 
 	req.Header.Set("Content-Type", reqContentType)
@@ -165,7 +175,7 @@ func (s *pet) AddPetJSON(ctx context.Context, request shared.Pet, security opera
 
 // AddPetRaw - Add a new pet to the store
 // Add a new pet to the store
-func (s *pet) AddPetRaw(ctx context.Context, request []byte, security operations.AddPetRawSecurity) (*operations.AddPetRawResponse, error) {
+func (s *pet) AddPetRaw(ctx context.Context, request []byte, security operations.AddPetRawSecurity, opts ...operations.Option) (*operations.AddPetRawResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/pet"
 
@@ -181,7 +191,12 @@ func (s *pet) AddPetRaw(ctx context.Context, request []byte, security operations
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	if o.AcceptHeaderOverride != nil {
+		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
+	} else {
+		req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	}
+
 	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s %s", s.sdkConfiguration.Language, s.sdkConfiguration.SDKVersion, s.sdkConfiguration.GenVersion, s.sdkConfiguration.OpenAPIDocVersion))
 
 	req.Header.Set("Content-Type", reqContentType)
@@ -282,7 +297,7 @@ func (s *pet) DeletePet(ctx context.Context, request operations.DeletePetRequest
 
 // FindPetsByStatus - Finds Pets by status
 // Multiple status values can be provided with comma separated strings
-func (s *pet) FindPetsByStatus(ctx context.Context, request operations.FindPetsByStatusRequest, security operations.FindPetsByStatusSecurity) (*operations.FindPetsByStatusResponse, error) {
+func (s *pet) FindPetsByStatus(ctx context.Context, request operations.FindPetsByStatusRequest, security operations.FindPetsByStatusSecurity, opts ...operations.Option) (*operations.FindPetsByStatusResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/pet/findByStatus"
 
@@ -290,7 +305,12 @@ func (s *pet) FindPetsByStatus(ctx context.Context, request operations.FindPetsB
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	if o.AcceptHeaderOverride != nil {
+		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
+	} else {
+		req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	}
+
 	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s %s", s.sdkConfiguration.Language, s.sdkConfiguration.SDKVersion, s.sdkConfiguration.GenVersion, s.sdkConfiguration.OpenAPIDocVersion))
 
 	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
@@ -344,7 +364,7 @@ func (s *pet) FindPetsByStatus(ctx context.Context, request operations.FindPetsB
 
 // FindPetsByTags - Finds Pets by tags
 // Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
-func (s *pet) FindPetsByTags(ctx context.Context, request operations.FindPetsByTagsRequest, security operations.FindPetsByTagsSecurity) (*operations.FindPetsByTagsResponse, error) {
+func (s *pet) FindPetsByTags(ctx context.Context, request operations.FindPetsByTagsRequest, security operations.FindPetsByTagsSecurity, opts ...operations.Option) (*operations.FindPetsByTagsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/pet/findByTags"
 
@@ -352,7 +372,12 @@ func (s *pet) FindPetsByTags(ctx context.Context, request operations.FindPetsByT
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	if o.AcceptHeaderOverride != nil {
+		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
+	} else {
+		req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	}
+
 	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s %s", s.sdkConfiguration.Language, s.sdkConfiguration.SDKVersion, s.sdkConfiguration.GenVersion, s.sdkConfiguration.OpenAPIDocVersion))
 
 	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
@@ -406,7 +431,7 @@ func (s *pet) FindPetsByTags(ctx context.Context, request operations.FindPetsByT
 
 // GetPetByID - Find pet by ID
 // Returns a single pet
-func (s *pet) GetPetByID(ctx context.Context, request operations.GetPetByIDRequest, security operations.GetPetByIDSecurity) (*operations.GetPetByIDResponse, error) {
+func (s *pet) GetPetByID(ctx context.Context, request operations.GetPetByIDRequest, security operations.GetPetByIDSecurity, opts ...operations.Option) (*operations.GetPetByIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/pet/{petId}", request, nil)
 	if err != nil {
@@ -417,7 +442,12 @@ func (s *pet) GetPetByID(ctx context.Context, request operations.GetPetByIDReque
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	if o.AcceptHeaderOverride != nil {
+		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
+	} else {
+		req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	}
+
 	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s %s", s.sdkConfiguration.Language, s.sdkConfiguration.SDKVersion, s.sdkConfiguration.GenVersion, s.sdkConfiguration.OpenAPIDocVersion))
 
 	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, security)
@@ -519,7 +549,7 @@ func (s *pet) UpdatePetWithForm(ctx context.Context, request operations.UpdatePe
 
 // UpdatePetForm - Update an existing pet
 // Update an existing pet by Id
-func (s *pet) UpdatePetForm(ctx context.Context, request shared.Pet, security operations.UpdatePetFormSecurity) (*operations.UpdatePetFormResponse, error) {
+func (s *pet) UpdatePetForm(ctx context.Context, request shared.Pet, security operations.UpdatePetFormSecurity, opts ...operations.Option) (*operations.UpdatePetFormResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/pet"
 
@@ -535,7 +565,12 @@ func (s *pet) UpdatePetForm(ctx context.Context, request shared.Pet, security op
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	if o.AcceptHeaderOverride != nil {
+		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
+	} else {
+		req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	}
+
 	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s %s", s.sdkConfiguration.Language, s.sdkConfiguration.SDKVersion, s.sdkConfiguration.GenVersion, s.sdkConfiguration.OpenAPIDocVersion))
 
 	req.Header.Set("Content-Type", reqContentType)
@@ -591,7 +626,7 @@ func (s *pet) UpdatePetForm(ctx context.Context, request shared.Pet, security op
 
 // UpdatePetJSON - Update an existing pet
 // Update an existing pet by Id
-func (s *pet) UpdatePetJSON(ctx context.Context, request shared.Pet, security operations.UpdatePetJSONSecurity) (*operations.UpdatePetJSONResponse, error) {
+func (s *pet) UpdatePetJSON(ctx context.Context, request shared.Pet, security operations.UpdatePetJSONSecurity, opts ...operations.Option) (*operations.UpdatePetJSONResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/pet"
 
@@ -607,7 +642,12 @@ func (s *pet) UpdatePetJSON(ctx context.Context, request shared.Pet, security op
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	if o.AcceptHeaderOverride != nil {
+		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
+	} else {
+		req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	}
+
 	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s %s", s.sdkConfiguration.Language, s.sdkConfiguration.SDKVersion, s.sdkConfiguration.GenVersion, s.sdkConfiguration.OpenAPIDocVersion))
 
 	req.Header.Set("Content-Type", reqContentType)
@@ -663,7 +703,7 @@ func (s *pet) UpdatePetJSON(ctx context.Context, request shared.Pet, security op
 
 // UpdatePetRaw - Update an existing pet
 // Update an existing pet by Id
-func (s *pet) UpdatePetRaw(ctx context.Context, request []byte, security operations.UpdatePetRawSecurity) (*operations.UpdatePetRawResponse, error) {
+func (s *pet) UpdatePetRaw(ctx context.Context, request []byte, security operations.UpdatePetRawSecurity, opts ...operations.Option) (*operations.UpdatePetRawResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/pet"
 
@@ -679,7 +719,12 @@ func (s *pet) UpdatePetRaw(ctx context.Context, request []byte, security operati
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	if o.AcceptHeaderOverride != nil {
+		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
+	} else {
+		req.Header.Set("Accept", "application/json;q=1, application/xml;q=0")
+	}
+
 	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s %s", s.sdkConfiguration.Language, s.sdkConfiguration.SDKVersion, s.sdkConfiguration.GenVersion, s.sdkConfiguration.OpenAPIDocVersion))
 
 	req.Header.Set("Content-Type", reqContentType)
