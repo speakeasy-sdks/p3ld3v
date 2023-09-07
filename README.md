@@ -19,8 +19,8 @@ import(
 	"context"
 	"log"
 	"github.com/speakeasy-sdks/p3ld3v"
-	"github.com/speakeasy-sdks/p3ld3v/pkg/models/shared"
 	"github.com/speakeasy-sdks/p3ld3v/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/pkg/models/shared"
 )
 
 func main() {
@@ -38,27 +38,13 @@ func main() {
         ID: bestapievermade.Int64(10),
         Name: "doggie",
         PhotoUrls: []string{
-            "provident",
-            "distinctio",
-            "quibusdam",
+            "corrupti",
         },
         Status: shared.PetStatusPending.ToPointer(),
         Tags: []shared.Tag{
             shared.Tag{
-                ID: bestapievermade.Int64(544883),
-                Name: bestapievermade.String("Ben Mueller"),
-            },
-            shared.Tag{
-                ID: bestapievermade.Int64(437587),
-                Name: bestapievermade.String("Raquel Bednar"),
-            },
-            shared.Tag{
-                ID: bestapievermade.Int64(383441),
-                Name: bestapievermade.String("Alexandra Schulist"),
-            },
-            shared.Tag{
-                ID: bestapievermade.Int64(568045),
-                Name: bestapievermade.String("Mrs. Sophie Smith MD"),
+                ID: bestapievermade.Int64(715190),
+                Name: bestapievermade.String("Stuart Stiedemann"),
             },
         },
     }, operationSecurity)

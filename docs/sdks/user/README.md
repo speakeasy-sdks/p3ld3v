@@ -144,7 +144,7 @@ func main() {
     s := bestapievermade.New()
 
     ctx := context.Background()
-    res, err := s.User.CreateUserRaw(ctx, []byte("quasi"))
+    res, err := s.User.CreateUserRaw(ctx, []byte("ipsum"))
     if err != nil {
         log.Fatal(err)
     }
@@ -189,36 +189,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.CreateUsersWithListInput(ctx, []shared.User{
-        shared.User{
-            Email: bestapievermade.String("john@email.com"),
-            FirstName: bestapievermade.String("John"),
-            ID: bestapievermade.Int64(10),
-            LastName: bestapievermade.String("James"),
-            Password: bestapievermade.String("12345"),
-            Phone: bestapievermade.String("12345"),
-            UserStatus: bestapievermade.Int(1),
-            Username: bestapievermade.String("theUser"),
-        },
-        shared.User{
-            Email: bestapievermade.String("john@email.com"),
-            FirstName: bestapievermade.String("John"),
-            ID: bestapievermade.Int64(10),
-            LastName: bestapievermade.String("James"),
-            Password: bestapievermade.String("12345"),
-            Phone: bestapievermade.String("12345"),
-            UserStatus: bestapievermade.Int(1),
-            Username: bestapievermade.String("theUser"),
-        },
-        shared.User{
-            Email: bestapievermade.String("john@email.com"),
-            FirstName: bestapievermade.String("John"),
-            ID: bestapievermade.Int64(10),
-            LastName: bestapievermade.String("James"),
-            Password: bestapievermade.String("12345"),
-            Phone: bestapievermade.String("12345"),
-            UserStatus: bestapievermade.Int(1),
-            Username: bestapievermade.String("theUser"),
-        },
         shared.User{
             Email: bestapievermade.String("john@email.com"),
             FirstName: bestapievermade.String("John"),
@@ -274,7 +244,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.DeleteUser(ctx, operations.DeleteUserRequest{
-        Username: "Weston_Thiel",
+        Username: "Keshaun32",
     })
     if err != nil {
         log.Fatal(err)
@@ -320,7 +290,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.GetUserByName(ctx, operations.GetUserByNameRequest{
-        Username: "Whitney.Bednar",
+        Username: "Lia.Cormier",
     })
     if err != nil {
         log.Fatal(err)
@@ -366,8 +336,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.LoginUser(ctx, operations.LoginUserRequest{
-        Password: bestapievermade.String("cum"),
-        Username: bestapievermade.String("Aiyana.Batz"),
+        Password: bestapievermade.String("natus"),
+        Username: bestapievermade.String("Gertrude_Welch44"),
     })
     if err != nil {
         log.Fatal(err)
@@ -466,7 +436,7 @@ func main() {
             UserStatus: bestapievermade.Int(1),
             Username: bestapievermade.String("theUser"),
         },
-        Username: "Wilfrid.Carter",
+        Username: "Floy_Moore",
     })
     if err != nil {
         log.Fatal(err)
@@ -523,7 +493,7 @@ func main() {
             UserStatus: bestapievermade.Int(1),
             Username: bestapievermade.String("theUser"),
         },
-        Username: "Jayden.Carter88",
+        Username: "Maxie96",
     })
     if err != nil {
         log.Fatal(err)
@@ -570,8 +540,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.UpdateUserRaw(ctx, operations.UpdateUserRawRequest{
-        RequestBody: []byte("commodi"),
-        Username: "Terrill69",
+        RequestBody: []byte("est"),
+        Username: "Madaline21",
     })
     if err != nil {
         log.Fatal(err)
