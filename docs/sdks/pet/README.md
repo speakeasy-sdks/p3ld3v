@@ -39,7 +39,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.AddPetFormSecurity{
             PetstoreAuth: "",
         }
@@ -47,10 +47,10 @@ func main() {
     ctx := context.Background()
     res, err := s.Pet.AddPetForm(ctx, shared.Pet{
         Category: &shared.Category{
-            ID: bestapievermade.Int64(1),
-            Name: bestapievermade.String("Dogs"),
+            ID: p3ld3v.Int64(1),
+            Name: p3ld3v.String("Dogs"),
         },
-        ID: bestapievermade.Int64(10),
+        ID: p3ld3v.Int64(10),
         Name: "doggie",
         PhotoUrls: []string{
             "vel",
@@ -58,8 +58,8 @@ func main() {
         Status: shared.PetStatusPending.ToPointer(),
         Tags: []shared.Tag{
             shared.Tag{
-                ID: bestapievermade.Int64(645894),
-                Name: bestapievermade.String("Willie Gulgowski DVM"),
+                ID: p3ld3v.Int64(645894),
+                Name: p3ld3v.String("Willie Gulgowski DVM"),
             },
         },
     }, operationSecurity)
@@ -105,7 +105,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.AddPetJSONSecurity{
             PetstoreAuth: "",
         }
@@ -113,10 +113,10 @@ func main() {
     ctx := context.Background()
     res, err := s.Pet.AddPetJSON(ctx, shared.Pet{
         Category: &shared.Category{
-            ID: bestapievermade.Int64(1),
-            Name: bestapievermade.String("Dogs"),
+            ID: p3ld3v.Int64(1),
+            Name: p3ld3v.String("Dogs"),
         },
-        ID: bestapievermade.Int64(10),
+        ID: p3ld3v.Int64(10),
         Name: "doggie",
         PhotoUrls: []string{
             "tempora",
@@ -124,8 +124,8 @@ func main() {
         Status: shared.PetStatusPending.ToPointer(),
         Tags: []shared.Tag{
             shared.Tag{
-                ID: bestapievermade.Int64(477665),
-                Name: bestapievermade.String("Irving Lehner"),
+                ID: p3ld3v.Int64(477665),
+                Name: p3ld3v.String("Irving Lehner"),
             },
         },
     }, operationSecurity)
@@ -171,7 +171,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.AddPetRawSecurity{
             PetstoreAuth: "",
         }
@@ -219,14 +219,14 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.DeletePetSecurity{
             PetstoreAuth: "",
         }
 
     ctx := context.Background()
     res, err := s.Pet.DeletePet(ctx, operations.DeletePetRequest{
-        APIKey: bestapievermade.String("recusandae"),
+        APIKey: p3ld3v.String("recusandae"),
         PetID: 836079,
     }, operationSecurity)
     if err != nil {
@@ -270,7 +270,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.FindPetsByStatusSecurity{
             PetstoreAuth: "",
         }
@@ -320,7 +320,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.FindPetsByTagsSecurity{
             PetstoreAuth: "",
         }
@@ -372,9 +372,9 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.GetPetByIDSecurity{
-            APIKey: bestapievermade.String(""),
+            APIKey: p3ld3v.String(""),
         }
 
     ctx := context.Background()
@@ -422,16 +422,16 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.UpdatePetWithFormSecurity{
             PetstoreAuth: "",
         }
 
     ctx := context.Background()
     res, err := s.Pet.UpdatePetWithForm(ctx, operations.UpdatePetWithFormRequest{
-        Name: bestapievermade.String("Christopher Hills"),
+        Name: p3ld3v.String("Christopher Hills"),
         PetID: 778157,
-        Status: bestapievermade.String("odit"),
+        Status: p3ld3v.String("odit"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -475,7 +475,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.UpdatePetFormSecurity{
             PetstoreAuth: "",
         }
@@ -483,10 +483,10 @@ func main() {
     ctx := context.Background()
     res, err := s.Pet.UpdatePetForm(ctx, shared.Pet{
         Category: &shared.Category{
-            ID: bestapievermade.Int64(1),
-            Name: bestapievermade.String("Dogs"),
+            ID: p3ld3v.Int64(1),
+            Name: p3ld3v.String("Dogs"),
         },
-        ID: bestapievermade.Int64(10),
+        ID: p3ld3v.Int64(10),
         Name: "doggie",
         PhotoUrls: []string{
             "at",
@@ -494,8 +494,8 @@ func main() {
         Status: shared.PetStatusSold.ToPointer(),
         Tags: []shared.Tag{
             shared.Tag{
-                ID: bestapievermade.Int64(978619),
-                Name: bestapievermade.String("Bernadette Schmidt"),
+                ID: p3ld3v.Int64(978619),
+                Name: p3ld3v.String("Bernadette Schmidt"),
             },
         },
     }, operationSecurity)
@@ -541,7 +541,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.UpdatePetJSONSecurity{
             PetstoreAuth: "",
         }
@@ -549,10 +549,10 @@ func main() {
     ctx := context.Background()
     res, err := s.Pet.UpdatePetJSON(ctx, shared.Pet{
         Category: &shared.Category{
-            ID: bestapievermade.Int64(1),
-            Name: bestapievermade.String("Dogs"),
+            ID: p3ld3v.Int64(1),
+            Name: p3ld3v.String("Dogs"),
         },
-        ID: bestapievermade.Int64(10),
+        ID: p3ld3v.Int64(10),
         Name: "doggie",
         PhotoUrls: []string{
             "porro",
@@ -560,8 +560,8 @@ func main() {
         Status: shared.PetStatusSold.ToPointer(),
         Tags: []shared.Tag{
             shared.Tag{
-                ID: bestapievermade.Int64(118274),
-                Name: bestapievermade.String("Luke McCullough"),
+                ID: p3ld3v.Int64(118274),
+                Name: p3ld3v.String("Luke McCullough"),
             },
         },
     }, operationSecurity)
@@ -607,7 +607,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.UpdatePetRawSecurity{
             PetstoreAuth: "",
         }
@@ -655,7 +655,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.UploadFileSecurity{
             PetstoreAuth: "",
         }
@@ -663,7 +663,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Pet.UploadFile(ctx, operations.UploadFileRequest{
         RequestBody: []byte("optio"),
-        AdditionalMetadata: bestapievermade.String("totam"),
+        AdditionalMetadata: p3ld3v.String("totam"),
         PetID: 105907,
     }, operationSecurity)
     if err != nil {

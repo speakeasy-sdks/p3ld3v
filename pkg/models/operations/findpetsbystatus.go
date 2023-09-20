@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/speakeasy-sdks/p3ld3v/pkg/models/shared"
+	"github.com/speakeasy-sdks/p3ld3v/pkg/utils"
 	"net/http"
 )
 
@@ -53,7 +54,18 @@ func (e *FindPetsByStatusStatus) UnmarshalJSON(data []byte) error {
 
 type FindPetsByStatusRequest struct {
 	// Status values that need to be considered for filter
-	Status *FindPetsByStatusStatus `queryParam:"style=form,explode=true,name=status"`
+	Status *FindPetsByStatusStatus `default:"available" queryParam:"style=form,explode=true,name=status"`
+}
+
+func (f FindPetsByStatusRequest) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(f, "", false)
+}
+
+func (f *FindPetsByStatusRequest) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &f, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *FindPetsByStatusRequest) GetStatus() *FindPetsByStatusStatus {

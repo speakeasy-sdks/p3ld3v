@@ -32,7 +32,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.Store.DeleteOrder(ctx, operations.DeleteOrderRequest{
@@ -78,7 +78,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.GetInventorySecurity{
             APIKey: "",
         }
@@ -125,7 +125,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.Store.GetOrderByID(ctx, operations.GetOrderByIDRequest{
@@ -172,14 +172,14 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.Store.PlaceOrderForm(ctx, shared.Order{
-        Complete: bestapievermade.Bool(false),
-        ID: bestapievermade.Int64(10),
-        PetID: bestapievermade.Int64(198772),
-        Quantity: bestapievermade.Int(7),
+        Complete: p3ld3v.Bool(false),
+        ID: p3ld3v.Int64(10),
+        PetID: p3ld3v.Int64(198772),
+        Quantity: p3ld3v.Int(7),
         ShipDate: types.MustTimeFromString("2022-10-24T23:43:42.369Z"),
         Status: shared.OrderStatusApproved.ToPointer(),
     })
@@ -224,14 +224,14 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.Store.PlaceOrderJSON(ctx, shared.Order{
-        Complete: bestapievermade.Bool(false),
-        ID: bestapievermade.Int64(10),
-        PetID: bestapievermade.Int64(198772),
-        Quantity: bestapievermade.Int(7),
+        Complete: p3ld3v.Bool(false),
+        ID: p3ld3v.Int64(10),
+        PetID: p3ld3v.Int64(198772),
+        Quantity: p3ld3v.Int(7),
         ShipDate: types.MustTimeFromString("2020-10-16T01:47:24.760Z"),
         Status: shared.OrderStatusApproved.ToPointer(),
     })
@@ -276,7 +276,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.Store.PlaceOrderRaw(ctx, []byte("esse"))

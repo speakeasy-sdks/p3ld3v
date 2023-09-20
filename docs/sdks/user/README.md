@@ -35,18 +35,18 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.CreateUserForm(ctx, shared.User{
-        Email: bestapievermade.String("john@email.com"),
-        FirstName: bestapievermade.String("John"),
-        ID: bestapievermade.Int64(10),
-        LastName: bestapievermade.String("James"),
-        Password: bestapievermade.String("12345"),
-        Phone: bestapievermade.String("12345"),
-        UserStatus: bestapievermade.Int(1),
-        Username: bestapievermade.String("theUser"),
+        Email: p3ld3v.String("john@email.com"),
+        FirstName: p3ld3v.String("John"),
+        ID: p3ld3v.Int64(10),
+        LastName: p3ld3v.String("James"),
+        Password: p3ld3v.String("12345"),
+        Phone: p3ld3v.String("12345"),
+        UserStatus: p3ld3v.Int(1),
+        Username: p3ld3v.String("theUser"),
     })
     if err != nil {
         log.Fatal(err)
@@ -88,18 +88,18 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.CreateUserJSON(ctx, shared.User{
-        Email: bestapievermade.String("john@email.com"),
-        FirstName: bestapievermade.String("John"),
-        ID: bestapievermade.Int64(10),
-        LastName: bestapievermade.String("James"),
-        Password: bestapievermade.String("12345"),
-        Phone: bestapievermade.String("12345"),
-        UserStatus: bestapievermade.Int(1),
-        Username: bestapievermade.String("theUser"),
+        Email: p3ld3v.String("john@email.com"),
+        FirstName: p3ld3v.String("John"),
+        ID: p3ld3v.Int64(10),
+        LastName: p3ld3v.String("James"),
+        Password: p3ld3v.String("12345"),
+        Phone: p3ld3v.String("12345"),
+        UserStatus: p3ld3v.Int(1),
+        Username: p3ld3v.String("theUser"),
     })
     if err != nil {
         log.Fatal(err)
@@ -141,7 +141,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.CreateUserRaw(ctx, []byte("ipsum"))
@@ -185,19 +185,19 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.CreateUsersWithListInput(ctx, []shared.User{
         shared.User{
-            Email: bestapievermade.String("john@email.com"),
-            FirstName: bestapievermade.String("John"),
-            ID: bestapievermade.Int64(10),
-            LastName: bestapievermade.String("James"),
-            Password: bestapievermade.String("12345"),
-            Phone: bestapievermade.String("12345"),
-            UserStatus: bestapievermade.Int(1),
-            Username: bestapievermade.String("theUser"),
+            Email: p3ld3v.String("john@email.com"),
+            FirstName: p3ld3v.String("John"),
+            ID: p3ld3v.Int64(10),
+            LastName: p3ld3v.String("James"),
+            Password: p3ld3v.String("12345"),
+            Phone: p3ld3v.String("12345"),
+            UserStatus: p3ld3v.Int(1),
+            Username: p3ld3v.String("theUser"),
         },
     })
     if err != nil {
@@ -240,7 +240,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.DeleteUser(ctx, operations.DeleteUserRequest{
@@ -286,7 +286,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.GetUserByName(ctx, operations.GetUserByNameRequest{
@@ -332,12 +332,12 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.LoginUser(ctx, operations.LoginUserRequest{
-        Password: bestapievermade.String("natus"),
-        Username: bestapievermade.String("Gertrude_Welch44"),
+        Password: p3ld3v.String("natus"),
+        Username: p3ld3v.String("Gertrude_Welch44"),
     })
     if err != nil {
         log.Fatal(err)
@@ -378,7 +378,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.LogoutUser(ctx)
@@ -422,19 +422,19 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.UpdateUserForm(ctx, operations.UpdateUserFormRequest{
         User: &shared.User{
-            Email: bestapievermade.String("john@email.com"),
-            FirstName: bestapievermade.String("John"),
-            ID: bestapievermade.Int64(10),
-            LastName: bestapievermade.String("James"),
-            Password: bestapievermade.String("12345"),
-            Phone: bestapievermade.String("12345"),
-            UserStatus: bestapievermade.Int(1),
-            Username: bestapievermade.String("theUser"),
+            Email: p3ld3v.String("john@email.com"),
+            FirstName: p3ld3v.String("John"),
+            ID: p3ld3v.Int64(10),
+            LastName: p3ld3v.String("James"),
+            Password: p3ld3v.String("12345"),
+            Phone: p3ld3v.String("12345"),
+            UserStatus: p3ld3v.Int(1),
+            Username: p3ld3v.String("theUser"),
         },
         Username: "Floy_Moore",
     })
@@ -479,19 +479,19 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.UpdateUserJSON(ctx, operations.UpdateUserJSONRequest{
         User: &shared.User{
-            Email: bestapievermade.String("john@email.com"),
-            FirstName: bestapievermade.String("John"),
-            ID: bestapievermade.Int64(10),
-            LastName: bestapievermade.String("James"),
-            Password: bestapievermade.String("12345"),
-            Phone: bestapievermade.String("12345"),
-            UserStatus: bestapievermade.Int(1),
-            Username: bestapievermade.String("theUser"),
+            Email: p3ld3v.String("john@email.com"),
+            FirstName: p3ld3v.String("John"),
+            ID: p3ld3v.Int64(10),
+            LastName: p3ld3v.String("James"),
+            Password: p3ld3v.String("12345"),
+            Phone: p3ld3v.String("12345"),
+            UserStatus: p3ld3v.Int(1),
+            Username: p3ld3v.String("theUser"),
         },
         Username: "Maxie96",
     })
@@ -536,7 +536,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
 
     ctx := context.Background()
     res, err := s.User.UpdateUserRaw(ctx, operations.UpdateUserRawRequest{

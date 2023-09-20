@@ -13,7 +13,7 @@ import(
 )
 
 func main() {
-    s := bestapievermade.New()
+    s := p3ld3v.New()
     operationSecurity := operations.AddPetFormSecurity{
             PetstoreAuth: "",
         }
@@ -21,10 +21,10 @@ func main() {
     ctx := context.Background()
     res, err := s.Pet.AddPetForm(ctx, shared.Pet{
         Category: &shared.Category{
-            ID: bestapievermade.Int64(1),
-            Name: bestapievermade.String("Dogs"),
+            ID: p3ld3v.Int64(1),
+            Name: p3ld3v.String("Dogs"),
         },
-        ID: bestapievermade.Int64(10),
+        ID: p3ld3v.Int64(10),
         Name: "doggie",
         PhotoUrls: []string{
             "corrupti",
@@ -32,8 +32,8 @@ func main() {
         Status: shared.PetStatusPending.ToPointer(),
         Tags: []shared.Tag{
             shared.Tag{
-                ID: bestapievermade.Int64(715190),
-                Name: bestapievermade.String("Stuart Stiedemann"),
+                ID: p3ld3v.Int64(715190),
+                Name: p3ld3v.String("Stuart Stiedemann"),
             },
         },
     }, operationSecurity)
