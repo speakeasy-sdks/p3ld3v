@@ -8,15 +8,15 @@ import(
 	"context"
 	"log"
 	"github.com/speakeasy-sdks/p3ld3v"
-	"github.com/speakeasy-sdks/p3ld3v/pkg/models/operations"
 	"github.com/speakeasy-sdks/p3ld3v/pkg/models/shared"
 )
 
 func main() {
-    s := p3ld3v.New()
-    operationSecurity := operations.AddPetFormSecurity{
+    s := p3ld3v.New(
+        p3ld3v.WithSecurity(shared.Security{
             PetstoreAuth: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Pet.AddPetForm(ctx, shared.Pet{
@@ -36,7 +36,7 @@ func main() {
                 Name: p3ld3v.String("Stuart Stiedemann"),
             },
         },
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }

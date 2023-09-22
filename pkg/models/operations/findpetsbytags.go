@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type FindPetsByTagsSecurity struct {
-	PetstoreAuth string `security:"scheme,type=oauth2,name=Authorization"`
-}
-
-func (o *FindPetsByTagsSecurity) GetPetstoreAuth() string {
-	if o == nil {
-		return ""
-	}
-	return o.PetstoreAuth
-}
-
 type FindPetsByTagsRequest struct {
 	// Tags to filter by
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`

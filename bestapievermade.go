@@ -4,6 +4,7 @@ package p3ld3v
 
 import (
 	"fmt"
+	"github.com/speakeasy-sdks/p3ld3v/pkg/models/shared"
 	"github.com/speakeasy-sdks/p3ld3v/pkg/utils"
 	"net/http"
 	"time"
@@ -38,9 +39,9 @@ func Float32(f float32) *float32 { return &f }
 func Float64(f float64) *float64 { return &f }
 
 type sdkConfiguration struct {
-	DefaultClient  HTTPClient
-	SecurityClient HTTPClient
-
+	DefaultClient     HTTPClient
+	SecurityClient    HTTPClient
+	Security          *shared.Security
 	ServerURL         string
 	ServerIndex       int
 	Language          string
@@ -123,6 +124,13 @@ func WithClient(client HTTPClient) SDKOption {
 	}
 }
 
+// WithSecurity configures the SDK to use the provided security details
+func WithSecurity(security shared.Security) SDKOption {
+	return func(sdk *BestAPIEverMade) {
+		sdk.sdkConfiguration.Security = &security
+	}
+}
+
 func WithRetryConfig(retryConfig utils.RetryConfig) SDKOption {
 	return func(sdk *BestAPIEverMade) {
 		sdk.sdkConfiguration.RetryConfig = &retryConfig
@@ -135,8 +143,8 @@ func New(opts ...SDKOption) *BestAPIEverMade {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.11",
-			SDKVersion:        "1.2.1",
-			GenVersion:        "2.118.1",
+			SDKVersion:        "1.3.0",
+			GenVersion:        "2.125.1",
 		},
 	}
 	for _, opt := range opts {
@@ -148,7 +156,11 @@ func New(opts ...SDKOption) *BestAPIEverMade {
 		sdk.sdkConfiguration.DefaultClient = &http.Client{Timeout: 60 * time.Second}
 	}
 	if sdk.sdkConfiguration.SecurityClient == nil {
-		sdk.sdkConfiguration.SecurityClient = sdk.sdkConfiguration.DefaultClient
+		if sdk.sdkConfiguration.Security != nil {
+			sdk.sdkConfiguration.SecurityClient = utils.ConfigureSecurityClient(sdk.sdkConfiguration.DefaultClient, sdk.sdkConfiguration.Security)
+		} else {
+			sdk.sdkConfiguration.SecurityClient = sdk.sdkConfiguration.DefaultClient
+		}
 	}
 
 	sdk.Pet = newPet(sdk.sdkConfiguration)

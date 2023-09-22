@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type UpdatePetJSONSecurity struct {
-	PetstoreAuth string `security:"scheme,type=oauth2,name=Authorization"`
-}
-
-func (o *UpdatePetJSONSecurity) GetPetstoreAuth() string {
-	if o == nil {
-		return ""
-	}
-	return o.PetstoreAuth
-}
-
 type UpdatePetJSONResponse struct {
 	Body        []byte
 	ContentType string
