@@ -27,13 +27,13 @@ func main() {
         ID: p3ld3v.Int64(10),
         Name: "doggie",
         PhotoUrls: []string{
-            "corrupti",
+            "yellow",
         },
-        Status: shared.PetStatusPending.ToPointer(),
+        Status: shared.PetStatusSold.ToPointer(),
         Tags: []shared.Tag{
             shared.Tag{
-                ID: p3ld3v.Int64(715190),
-                Name: p3ld3v.String("Stuart Stiedemann"),
+                ID: p3ld3v.Int64(837177),
+                Name: p3ld3v.String("North Awesome"),
             },
         },
     })
