@@ -179,7 +179,6 @@ import(
 	"log"
 	"github.com/speakeasy-sdks/p3ld3v"
 	"github.com/speakeasy-sdks/p3ld3v/pkg/models/shared"
-	"github.com/speakeasy-sdks/p3ld3v/pkg/types"
 )
 
 func main() {
@@ -190,12 +189,10 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Store.PlaceOrderForm(ctx, shared.Order{
-        Complete: p3ld3v.Bool(false),
+    res, err := s.Store.PlaceOrderForm(ctx, &shared.Order{
         ID: p3ld3v.Int64(10),
         PetID: p3ld3v.Int64(198772),
         Quantity: p3ld3v.Int(7),
-        ShipDate: types.MustTimeFromString("2023-07-01T05:15:42.087Z"),
         Status: shared.OrderStatusApproved.ToPointer(),
     })
     if err != nil {
@@ -235,7 +232,6 @@ import(
 	"log"
 	"github.com/speakeasy-sdks/p3ld3v"
 	"github.com/speakeasy-sdks/p3ld3v/pkg/models/shared"
-	"github.com/speakeasy-sdks/p3ld3v/pkg/types"
 )
 
 func main() {
@@ -246,12 +242,10 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Store.PlaceOrderJSON(ctx, shared.Order{
-        Complete: p3ld3v.Bool(false),
+    res, err := s.Store.PlaceOrderJSON(ctx, &shared.Order{
         ID: p3ld3v.Int64(10),
         PetID: p3ld3v.Int64(198772),
         Quantity: p3ld3v.Int(7),
-        ShipDate: types.MustTimeFromString("2021-04-28T14:07:22.796Z"),
         Status: shared.OrderStatusApproved.ToPointer(),
     })
     if err != nil {
@@ -291,7 +285,6 @@ import(
 	"log"
 	"github.com/speakeasy-sdks/p3ld3v"
 	"github.com/speakeasy-sdks/p3ld3v/pkg/models/shared"
-	"github.com/speakeasy-sdks/p3ld3v/pkg/types"
 )
 
 func main() {
@@ -302,7 +295,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Store.PlaceOrderRaw(ctx, []byte("UlJXn(4[x^"))
+    res, err := s.Store.PlaceOrderRaw(ctx, &[]byte("UlJXn(4[x^"))
     if err != nil {
         log.Fatal(err)
     }

@@ -56,12 +56,8 @@ func main() {
         PhotoUrls: []string{
             "yellow",
         },
-        Status: shared.PetStatusSold.ToPointer(),
         Tags: []shared.Tag{
-            shared.Tag{
-                ID: p3ld3v.Int64(837177),
-                Name: p3ld3v.String("North Awesome"),
-            },
+            shared.Tag{},
         },
     })
     if err != nil {
@@ -121,12 +117,8 @@ func main() {
         PhotoUrls: []string{
             "male",
         },
-        Status: shared.PetStatusSold.ToPointer(),
         Tags: []shared.Tag{
-            shared.Tag{
-                ID: p3ld3v.Int64(122057),
-                Name: p3ld3v.String("whiteboard Mobility Cis"),
-            },
+            shared.Tag{},
         },
     })
     if err != nil {
@@ -226,8 +218,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pet.DeletePet(ctx, operations.DeletePetRequest{
-        APIKey: p3ld3v.String("Northwest female"),
-        PetID: 979259,
+        PetID: 441876,
     })
     if err != nil {
         log.Fatal(err)
@@ -277,9 +268,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Pet.FindPetsByStatus(ctx, operations.FindPetsByStatusRequest{
-        Status: operations.FindPetsByStatusStatusSold.ToPointer(),
-    })
+    res, err := s.Pet.FindPetsByStatus(ctx, operations.FindPetsByStatusRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -432,9 +421,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pet.UpdatePetWithForm(ctx, operations.UpdatePetWithFormRequest{
-        Name: p3ld3v.String("XSS"),
-        PetID: 505104,
-        Status: p3ld3v.String("Awesome"),
+        PetID: 303241,
     })
     if err != nil {
         log.Fatal(err)
@@ -493,12 +480,8 @@ func main() {
         PhotoUrls: []string{
             "Associate",
         },
-        Status: shared.PetStatusPending.ToPointer(),
         Tags: []shared.Tag{
-            shared.Tag{
-                ID: p3ld3v.Int64(47695),
-                Name: p3ld3v.String("azure Ringgit Analyst"),
-            },
+            shared.Tag{},
         },
     })
     if err != nil {
@@ -558,12 +541,8 @@ func main() {
         PhotoUrls: []string{
             "engage",
         },
-        Status: shared.PetStatusPending.ToPointer(),
         Tags: []shared.Tag{
-            shared.Tag{
-                ID: p3ld3v.Int64(474658),
-                Name: p3ld3v.String("Wooden along"),
-            },
+            shared.Tag{},
         },
     })
     if err != nil {
@@ -664,8 +643,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Pet.UploadFile(ctx, operations.UploadFileRequest{
         RequestBody: []byte("U?WWKB{5@q"),
-        AdditionalMetadata: p3ld3v.String("through ew"),
-        PetID: 712651,
+        PetID: 621158,
     })
     if err != nil {
         log.Fatal(err)

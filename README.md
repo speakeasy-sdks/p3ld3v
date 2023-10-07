@@ -38,12 +38,8 @@ func main() {
         PhotoUrls: []string{
             "yellow",
         },
-        Status: shared.PetStatusSold.ToPointer(),
         Tags: []shared.Tag{
-            shared.Tag{
-                ID: p3ld3v.Int64(837177),
-                Name: p3ld3v.String("North Awesome"),
-            },
+            shared.Tag{},
         },
     })
     if err != nil {

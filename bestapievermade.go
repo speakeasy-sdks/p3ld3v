@@ -125,6 +125,7 @@ func WithClient(client HTTPClient) SDKOption {
 		sdk.sdkConfiguration.DefaultClient = client
 	}
 }
+
 func withSecurity(security interface{}) func(context.Context) (interface{}, error) {
 	return func(context.Context) (interface{}, error) {
 		return &security, nil
@@ -132,18 +133,11 @@ func withSecurity(security interface{}) func(context.Context) (interface{}, erro
 }
 
 // WithSecurity configures the SDK to use the provided security details
-func WithSecurity(security shared.Security) SDKOption {
-	return func(sdk *BestAPIEverMade) {
-		sdk.sdkConfiguration.Security = withSecurity(security)
-	}
-}
 
-// WithSecuritySource configures the SDK to invoke the Security Source function on each method call to determine authentication
-func WithSecuritySource(security func(context.Context) (shared.Security, error)) SDKOption {
+func WithSecurity(petstoreAuth string) SDKOption {
 	return func(sdk *BestAPIEverMade) {
-		sdk.sdkConfiguration.Security = func(ctx context.Context) (interface{}, error) {
-			return security(ctx)
-		}
+		security := shared.Security{PetstoreAuth: petstoreAuth}
+		sdk.sdkConfiguration.Security = withSecurity(&security)
 	}
 }
 
@@ -159,9 +153,9 @@ func New(opts ...SDKOption) *BestAPIEverMade {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.11",
-			SDKVersion:        "1.4.0",
-			GenVersion:        "2.139.1",
-			UserAgent:         "speakeasy-sdk/go 1.4.0 2.139.1 1.0.11 github.com/speakeasy-sdks/p3ld3v",
+			SDKVersion:        "1.5.0",
+			GenVersion:        "2.150.0",
+			UserAgent:         "speakeasy-sdk/go 1.5.0 2.150.0 1.0.11 github.com/speakeasy-sdks/p3ld3v",
 		},
 	}
 	for _, opt := range opts {

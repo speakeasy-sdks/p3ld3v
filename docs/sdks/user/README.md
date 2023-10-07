@@ -43,7 +43,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.User.CreateUserForm(ctx, shared.User{
+    res, err := s.User.CreateUserForm(ctx, &shared.User{
         Email: p3ld3v.String("john@email.com"),
         FirstName: p3ld3v.String("John"),
         ID: p3ld3v.Int64(10),
@@ -100,7 +100,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.User.CreateUserJSON(ctx, shared.User{
+    res, err := s.User.CreateUserJSON(ctx, &shared.User{
         Email: p3ld3v.String("john@email.com"),
         FirstName: p3ld3v.String("John"),
         ID: p3ld3v.Int64(10),
@@ -157,7 +157,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.User.CreateUserRaw(ctx, []byte("i5Xui)x^_Y"))
+    res, err := s.User.CreateUserRaw(ctx, &[]byte("i5Xui)x^_Y"))
     if err != nil {
         log.Fatal(err)
     }
@@ -205,7 +205,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.User.CreateUsersWithListInput(ctx, []shared.User{
+    res, err := s.User.CreateUsersWithListInput(ctx, &[]shared.User{
         shared.User{
             Email: p3ld3v.String("john@email.com"),
             FirstName: p3ld3v.String("John"),
@@ -367,10 +367,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.User.LoginUser(ctx, operations.LoginUserRequest{
-        Password: p3ld3v.String("ksPrq3dzBQkU6Le"),
-        Username: p3ld3v.String("Edwin_Gleason"),
-    })
+    res, err := s.User.LoginUser(ctx, operations.LoginUserRequest{})
     if err != nil {
         log.Fatal(err)
     }
