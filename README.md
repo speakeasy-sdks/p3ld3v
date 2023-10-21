@@ -34,7 +34,7 @@ func main() {
 		ID:   p3ld3v.Int64(10),
 		Name: "doggie",
 		PhotoUrls: []string{
-			"yellow",
+			"string",
 		},
 		Tags: []shared.Tag{
 			shared.Tag{},
