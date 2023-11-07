@@ -1,4 +1,4 @@
-module github.com/speakeasy-sdks/p3ld3v
+module github.com/speakeasy-sdks/p3ld3v/v2
 
 go 1.14
 

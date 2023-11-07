@@ -5,8 +5,8 @@ package p3ld3v
 import (
 	"context"
 	"fmt"
-	"github.com/speakeasy-sdks/p3ld3v/pkg/models/shared"
-	"github.com/speakeasy-sdks/p3ld3v/pkg/utils"
+	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
+	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/utils"
 	"net/http"
 	"time"
 )
@@ -77,13 +77,13 @@ type BestAPIEverMade struct {
 	// Everything about your Pets
 	//
 	// http://swagger.io - Find out more
-	Pet *pet
+	Pet *Pet
 	// Access to Petstore orders
 	//
 	// http://swagger.io - Find out more about our store
-	Store *store
+	Store *Store
 	// Operations about user
-	User *user
+	User *User
 
 	sdkConfiguration sdkConfiguration
 }
@@ -153,9 +153,9 @@ func New(opts ...SDKOption) *BestAPIEverMade {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.11",
-			SDKVersion:        "1.6.0",
-			GenVersion:        "2.169.0",
-			UserAgent:         "speakeasy-sdk/go 1.6.0 2.169.0 1.0.11 github.com/speakeasy-sdks/p3ld3v",
+			SDKVersion:        "2.0.0",
+			GenVersion:        "2.181.1",
+			UserAgent:         "speakeasy-sdk/go 2.0.0 2.181.1 1.0.11 github.com/speakeasy-sdks/p3ld3v",
 		},
 	}
 	for _, opt := range opts {
