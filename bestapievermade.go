@@ -153,9 +153,9 @@ func New(opts ...SDKOption) *BestAPIEverMade {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.11",
-			SDKVersion:        "2.0.1",
-			GenVersion:        "2.185.0",
-			UserAgent:         "speakeasy-sdk/go 2.0.1 2.185.0 1.0.11 github.com/speakeasy-sdks/p3ld3v",
+			SDKVersion:        "2.0.2",
+			GenVersion:        "2.189.1",
+			UserAgent:         "speakeasy-sdk/go 2.0.2 2.189.1 1.0.11 github.com/speakeasy-sdks/p3ld3v",
 		},
 	}
 	for _, opt := range opts {
