@@ -10,7 +10,9 @@ import (
 )
 
 func main() {
-	s := p3ld3v.New()
+	s := p3ld3v.New(
+		p3ld3v.WithSecurity(""),
+	)
 
 	ctx := context.Background()
 	res, err := s.Pet.AddPetForm(ctx, shared.Pet{

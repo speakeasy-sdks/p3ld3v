@@ -23,7 +23,9 @@ import (
 )
 
 func main() {
-	s := p3ld3v.New()
+	s := p3ld3v.New(
+		p3ld3v.WithSecurity(""),
+	)
 
 	ctx := context.Background()
 	res, err := s.Pet.AddPetForm(ctx, shared.Pet{
@@ -137,13 +139,17 @@ package main
 
 import (
 	"context"
+	"errors"
 	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/sdkerrors"
 	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
 	"log"
 )
 
 func main() {
-	s := p3ld3v.New()
+	s := p3ld3v.New(
+		p3ld3v.WithSecurity(""),
+	)
 
 	ctx := context.Background()
 	res, err := s.Pet.AddPetForm(ctx, shared.Pet{
@@ -201,6 +207,7 @@ import (
 func main() {
 	s := p3ld3v.New(
 		p3ld3v.WithServerIndex(0),
+		p3ld3v.WithSecurity(""),
 	)
 
 	ctx := context.Background()
@@ -246,6 +253,7 @@ import (
 func main() {
 	s := p3ld3v.New(
 		p3ld3v.WithServerURL("https://petstore3.swagger.io/api/v3"),
+		p3ld3v.WithSecurity(""),
 	)
 
 	ctx := context.Background()
