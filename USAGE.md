@@ -11,7 +11,7 @@ import (
 
 func main() {
 	s := p3ld3v.New(
-		p3ld3v.WithSecurity(""),
+		p3ld3v.WithSecurity("Bearer <YOUR_ACCESS_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()

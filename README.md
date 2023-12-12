@@ -25,7 +25,7 @@ import (
 
 func main() {
 	s := p3ld3v.New(
-		p3ld3v.WithSecurity(""),
+		p3ld3v.WithSecurity("Bearer <YOUR_ACCESS_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -136,7 +136,7 @@ import (
 
 func main() {
 	s := p3ld3v.New(
-		p3ld3v.WithSecurity(""),
+		p3ld3v.WithSecurity("Bearer <YOUR_ACCESS_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -195,7 +195,7 @@ import (
 func main() {
 	s := p3ld3v.New(
 		p3ld3v.WithServerIndex(0),
-		p3ld3v.WithSecurity(""),
+		p3ld3v.WithSecurity("Bearer <YOUR_ACCESS_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -241,7 +241,7 @@ import (
 func main() {
 	s := p3ld3v.New(
 		p3ld3v.WithServerURL("https://petstore3.swagger.io/api/v3"),
-		p3ld3v.WithSecurity(""),
+		p3ld3v.WithSecurity("Bearer <YOUR_ACCESS_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -328,7 +328,7 @@ import (
 
 func main() {
 	s := p3ld3v.New(
-		p3ld3v.WithSecurity(""),
+		p3ld3v.WithSecurity("Bearer <YOUR_ACCESS_TOKEN_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -374,7 +374,7 @@ func main() {
 	s := p3ld3v.New()
 
 	operationSecurity := operations.GetPetByIDSecurity{
-		APIKey: p3ld3v.String(""),
+		APIKey: p3ld3v.String("<YOUR_API_KEY_HERE>"),
 	}
 
 	ctx := context.Background()
