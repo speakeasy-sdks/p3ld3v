@@ -2,23 +2,25 @@ configVersion: 1.0.0
 management:
   docChecksum: 64e50b146fb99c681b108200c154cced
   docVersion: 1.0.11
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+  speakeasyVersion: 1.127.0
+  generationVersion: 2.220.0
 generation:
   comments: {}
   sdkClassName: best-api-ever-made
   repoURL: https://github.com/speakeasy-sdks/p3ld3v.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
 features:
   go:
     constsAndDefaults: 0.1.2
-    core: 3.2.0
+    core: 3.2.2
     globalSecurity: 2.82.3
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.1
 go:
-  version: 2.1.0
+  version: 2.1.1
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
