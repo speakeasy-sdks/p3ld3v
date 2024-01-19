@@ -4,9 +4,9 @@ management:
   docChecksum: 64e50b146fb99c681b108200c154cced
   docVersion: 1.0.11
   speakeasyVersion: internal
-  generationVersion: 2.234.3
-  releaseVersion: 2.1.2
-  configChecksum: 10dfd3302f8a1b1e64d4f40ad5b0eb4a
+  generationVersion: 2.237.2
+  releaseVersion: 2.1.3
+  configChecksum: 4ae449054a05abf0ab2f4000e87d6360
   repoURL: https://github.com/speakeasy-sdks/p3ld3v.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/p3ld3v
@@ -15,9 +15,9 @@ features:
   go:
     constsAndDefaults: 0.1.2
     core: 3.3.1
-    globalSecurity: 2.82.3
+    globalSecurity: 2.82.4
     globalServerURLs: 2.82.1
-    methodSecurity: 2.82.1
+    methodSecurity: 2.82.2
 generatedFiles:
   - pet.go
   - store.go
@@ -25,7 +25,6 @@ generatedFiles:
   - bestapievermade.go
   - go.mod
   - go.sum
-  - tests/helpers.go
   - pkg/models/sdkerrors/sdkerror.go
   - pkg/types/bigint.go
   - pkg/types/date.go
