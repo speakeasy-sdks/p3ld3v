@@ -4,7 +4,7 @@ package operations
 
 import (
 	"errors"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/utils"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/utils"
 )
 
 var ErrUnsupportedOption = errors.New("unsupported option")

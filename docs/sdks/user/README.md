@@ -29,8 +29,8 @@ This can only be done by the logged in user.
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 	"net/http"
@@ -87,8 +87,8 @@ This can only be done by the logged in user.
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 	"net/http"
@@ -145,8 +145,8 @@ This can only be done by the logged in user.
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 	"net/http"
@@ -194,8 +194,8 @@ Creates list of users with given input array
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 )
@@ -253,10 +253,10 @@ This can only be done by the logged in user.
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 	"net/http"
 )
@@ -305,10 +305,10 @@ Get user by user name
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 )
 
@@ -356,10 +356,10 @@ Logs user into the system
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 )
 
@@ -405,8 +405,8 @@ Logs out current logged in user session
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 	"net/http"
@@ -453,10 +453,10 @@ This can only be done by the logged in user.
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 	"net/http"
 )
@@ -515,10 +515,10 @@ This can only be done by the logged in user.
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 	"net/http"
 )
@@ -577,10 +577,10 @@ This can only be done by the logged in user.
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 	"net/http"
 )

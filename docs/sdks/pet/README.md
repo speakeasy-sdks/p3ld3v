@@ -32,8 +32,8 @@ Add a new pet to the store
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 )
@@ -93,8 +93,8 @@ Add a new pet to the store
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 )
@@ -154,8 +154,8 @@ Add a new pet to the store
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 )
@@ -202,10 +202,10 @@ delete a pet
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 	"net/http"
 )
@@ -254,10 +254,10 @@ Multiple status values can be provided with comma separated strings
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 )
 
@@ -303,10 +303,10 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 )
 
@@ -356,8 +356,8 @@ Returns a single pet
 package main
 
 import(
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"context"
 	"log"
 )
@@ -410,10 +410,10 @@ Updates a pet in the store with form data
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 	"net/http"
 )
@@ -462,8 +462,8 @@ Update an existing pet by Id
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 )
@@ -523,8 +523,8 @@ Update an existing pet by Id
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 )
@@ -584,8 +584,8 @@ Update an existing pet by Id
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
 	"log"
 )
@@ -632,10 +632,10 @@ uploads an image
 package main
 
 import(
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
 	"context"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 )
 

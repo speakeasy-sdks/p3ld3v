@@ -18,8 +18,8 @@ package main
 
 import (
 	"context"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
 	"log"
 )
 
@@ -128,9 +128,9 @@ package main
 import (
 	"context"
 	"errors"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/sdkerrors"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/sdkerrors"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
 	"log"
 )
 
@@ -187,8 +187,8 @@ package main
 
 import (
 	"context"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
 	"log"
 )
 
@@ -233,8 +233,8 @@ package main
 
 import (
 	"context"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
 	"log"
 )
 
@@ -321,8 +321,8 @@ package main
 
 import (
 	"context"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
 	"log"
 )
 
@@ -365,8 +365,8 @@ package main
 
 import (
 	"context"
-	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v2"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/operations"
+	p3ld3v "github.com/speakeasy-sdks/p3ld3v/v3"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/operations"
 	"log"
 )
 

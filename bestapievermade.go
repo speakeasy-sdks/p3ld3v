@@ -5,8 +5,8 @@ package p3ld3v
 import (
 	"context"
 	"fmt"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/models/shared"
-	"github.com/speakeasy-sdks/p3ld3v/v2/pkg/utils"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
+	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/utils"
 	"net/http"
 	"time"
 )
@@ -161,9 +161,9 @@ func New(opts ...SDKOption) *BestAPIEverMade {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.11",
-			SDKVersion:        "2.1.4",
-			GenVersion:        "2.245.1",
-			UserAgent:         "speakeasy-sdk/go 2.1.4 2.245.1 1.0.11 github.com/speakeasy-sdks/p3ld3v",
+			SDKVersion:        "3.0.0",
+			GenVersion:        "2.248.1",
+			UserAgent:         "speakeasy-sdk/go 3.0.0 2.248.1 1.0.11 github.com/speakeasy-sdks/p3ld3v",
 		},
 	}
 	for _, opt := range opts {
