@@ -4,9 +4,9 @@ management:
   docChecksum: 64e50b146fb99c681b108200c154cced
   docVersion: 1.0.11
   speakeasyVersion: internal
-  generationVersion: 2.250.2
-  releaseVersion: 3.0.1
-  configChecksum: bc634dae212136ae266abbb6da634937
+  generationVersion: 2.253.0
+  releaseVersion: 3.0.2
+  configChecksum: 0794de8f15e23f7e0dc47f6c786c0100
   repoURL: https://github.com/speakeasy-sdks/p3ld3v.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/p3ld3v
