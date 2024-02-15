@@ -4,9 +4,9 @@ management:
   docChecksum: 64e50b146fb99c681b108200c154cced
   docVersion: 1.0.11
   speakeasyVersion: internal
-  generationVersion: 2.253.0
-  releaseVersion: 3.0.2
-  configChecksum: 0794de8f15e23f7e0dc47f6c786c0100
+  generationVersion: 2.258.2
+  releaseVersion: 3.1.0
+  configChecksum: 01ea4cc34fd29bbc055264e715561836
   repoURL: https://github.com/speakeasy-sdks/p3ld3v.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/p3ld3v
@@ -14,7 +14,7 @@ management:
 features:
   go:
     constsAndDefaults: 0.1.3
-    core: 3.3.2
+    core: 3.4.0
     globalSecurity: 2.82.6
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.2
@@ -139,3 +139,4 @@ generatedFiles:
   - USAGE.md
   - pkg/models/operations/options.go
   - .gitattributes
+  - internal/hooks/hooks.go

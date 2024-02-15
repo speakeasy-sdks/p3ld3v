@@ -5,6 +5,7 @@ package p3ld3v
 import (
 	"context"
 	"fmt"
+	"github.com/speakeasy-sdks/p3ld3v/v3/internal/hooks"
 	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/models/shared"
 	"github.com/speakeasy-sdks/p3ld3v/v3/pkg/utils"
 	"net/http"
@@ -51,6 +52,7 @@ type sdkConfiguration struct {
 	GenVersion        string
 	UserAgent         string
 	RetryConfig       *utils.RetryConfig
+	Hooks             *hooks.Hooks
 }
 
 func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
@@ -161,14 +163,17 @@ func New(opts ...SDKOption) *BestAPIEverMade {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.11",
-			SDKVersion:        "3.0.2",
-			GenVersion:        "2.253.0",
-			UserAgent:         "speakeasy-sdk/go 3.0.2 2.253.0 1.0.11 github.com/speakeasy-sdks/p3ld3v",
+			SDKVersion:        "3.1.0",
+			GenVersion:        "2.258.2",
+			UserAgent:         "speakeasy-sdk/go 3.1.0 2.258.2 1.0.11 github.com/speakeasy-sdks/p3ld3v",
+			Hooks:             hooks.New(),
 		},
 	}
 	for _, opt := range opts {
 		opt(sdk)
 	}
+
+	sdk.sdkConfiguration.DefaultClient = sdk.sdkConfiguration.Hooks.ClientInit(sdk.sdkConfiguration.DefaultClient)
 
 	// Use WithClient to override the default client if you would like to customize the timeout
 	if sdk.sdkConfiguration.DefaultClient == nil {
