@@ -163,9 +163,9 @@ func New(opts ...SDKOption) *BestAPIEverMade {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.11",
-			SDKVersion:        "3.1.3",
-			GenVersion:        "2.272.7",
-			UserAgent:         "speakeasy-sdk/go 3.1.3 2.272.7 1.0.11 github.com/speakeasy-sdks/p3ld3v",
+			SDKVersion:        "3.1.4",
+			GenVersion:        "2.277.0",
+			UserAgent:         "speakeasy-sdk/go 3.1.4 2.277.0 1.0.11 github.com/speakeasy-sdks/p3ld3v",
 			Hooks:             hooks.New(),
 		},
 	}
