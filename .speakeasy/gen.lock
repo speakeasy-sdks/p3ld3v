@@ -3,10 +3,10 @@ id: a079f66e-acea-44d0-94bd-b4293aa9b585
 management:
   docChecksum: 64e50b146fb99c681b108200c154cced
   docVersion: 1.0.11
-  speakeasyVersion: 1.204.1
-  generationVersion: 2.279.1
-  releaseVersion: 3.2.0
-  configChecksum: 3286fbcacd5357febdff19c5d83f2b20
+  speakeasyVersion: 1.207.1
+  generationVersion: 2.280.6
+  releaseVersion: 3.2.1
+  configChecksum: ed46e8da75370466304489506b65e343
   repoURL: https://github.com/speakeasy-sdks/p3ld3v.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/p3ld3v
@@ -16,7 +16,7 @@ features:
     constsAndDefaults: 0.1.4
     core: 3.4.4
     globalSecurity: 2.82.8
-    globalServerURLs: 2.82.1
+    globalServerURLs: 2.82.2
     methodSecurity: 2.82.2
     responseFormat: 0.1.0
 generatedFiles:
