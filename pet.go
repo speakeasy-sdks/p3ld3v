@@ -399,7 +399,7 @@ func (s *Pet) DeletePet(ctx context.Context, request operations.DeletePetRequest
 	req.Header.Set("Accept", "*/*")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	utils.PopulateHeaders(ctx, req, request)
+	utils.PopulateHeaders(ctx, req, request, nil)
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
@@ -446,6 +446,7 @@ func (s *Pet) DeletePet(ctx context.Context, request operations.DeletePetRequest
 	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 
 	switch {
+	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
@@ -869,6 +870,7 @@ func (s *Pet) UpdatePetWithForm(ctx context.Context, request operations.UpdatePe
 	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 
 	switch {
+	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
 	case httpRes.StatusCode == 405:
 		fallthrough
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
